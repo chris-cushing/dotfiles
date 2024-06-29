@@ -1,0 +1,21 @@
+[window]
+opacity = 0.95
+blur = true
+decorations_theme_variant = "Dark"
+padding = {x=4, y=0}
+
+[mouse]
+bindings = [
+{ mouse = "Right", action = "Paste"}
+]
+
+[font]
+normal = { family = "HackNerdFont", style = "Normal"}
+bold = { family = "HackNerdFont", style = "Bold"}
+italic = { family = "HackNerdFont", style = "italic"}
+bold_italic = { family = "HackNerdFont", style = "Bold Italic"}
+size = 12.0
+
+[selection]
+save_to_clipboard = true
+
