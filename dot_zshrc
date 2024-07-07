@@ -114,6 +114,7 @@ alias l='ls -CF'
 alias aptu="sudo apt update && sudo apt install"
 alias bits="cd ~/bits"
 alias cm="chezmoi"
+alias bat="batcat"
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
