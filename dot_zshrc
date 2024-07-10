@@ -1,4 +1,8 @@
-# Set up the prompt
+# For reference:
+#https://github.com/dreamsofcode-io/dotfiles/blob/main/.zshrc
+#https://github.com/dreamsofautonomy/dotfiles/blob/main/.zshrc
+#
+#Set up the prompt
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 autoload -Uz promptinit
