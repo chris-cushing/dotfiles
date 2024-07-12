@@ -47,11 +47,13 @@ eval "$(oh-my-posh init zsh)"
 alias cls='clear'
 alias vi='nvim'
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -alF --color'
+alias la='ls -A --color'
+alias l='ls -CF --color'
 alias aptu="sudo apt update && sudo apt install"
 alias bits="cd ~/bits"
 alias cm="chezmoi"
 alias bat="batcat"
+
+alias ..='cd ..'
 
