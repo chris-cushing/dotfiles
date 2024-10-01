@@ -1,4 +1,4 @@
-# For reference:
+
 #https://github.com/dreamsofcode-io/dotfiles/blob/main/.zshrc
 #https://github.com/dreamsofautonomy/dotfiles/blob/main/.zshrc
 #
@@ -41,19 +41,18 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-eval "$(oh-my-posh init zsh)"
+eval "$(oh-my-posh init zsh --config ~/powerlevel10k_rainbow.omp.json)"
 
 
 alias cls='clear'
 alias vi='nvim'
 
-alias ll='ls -alF --color'
-alias la='ls -A --color'
+alias ll='exa -AlF'
+alias la='exa -A'
 alias l='ls -CF --color'
 alias aptu="sudo apt update && sudo apt install"
 alias bits="cd ~/bits"
 alias cm="chezmoi"
-alias bat="batcat"
 
 alias ..='cd ..'
 
