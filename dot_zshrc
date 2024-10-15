@@ -55,4 +55,5 @@ alias bits="cd ~/bits"
 alias cm="chezmoi"
 
 alias ..='cd ..'
+alias act='. ./.venv/bin/activate'
 
