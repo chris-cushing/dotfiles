@@ -87,16 +87,16 @@
           "type": "julia"
         },
         {
-          "background": "#FFDE57",
+          "background": "#4063D8",
           "foreground": "#111111",
           "invert_powerline": true,
           "powerline_symbol": "\ue0b2",
           "properties": {
             "display_mode": "files",
-            "fetch_virtual_env": false
+            "fetch_virtual_env": true
           },
           "style": "powerline",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue235 ",
+          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{if .Venv }}({{ .Full }}){{else }}{{ .Full }}{{ end }}{{ end }}\ue235 ",
           "type": "python"
         },
         {
@@ -178,9 +178,12 @@
           "foreground": "#000000",
           "invert_powerline": true,
           "style": "diamond",
-          "template": " {{ .CurrentDate | date .Format }} \uf017 ",
-          "trailing_diamond": "\ue0b0\u2500\u256e",
-          "type": "time"
+          "template": " {{ .CurrentDate | date .Format }}",
+          "trailing_diamond": "\ue0b0",
+          "type": "time",
+          "properties": {
+            "time_format": "04:05"
+          }
         }
       ],
       "type": "prompt"
@@ -197,17 +200,6 @@
         }
       ],
       "type": "prompt"
-    },
-    {
-      "segments": [
-        {
-          "foreground": "#d3d7cf",
-          "style": "plain",
-          "template": "\u2500\u256f",
-          "type": "text"
-        }
-      ],
-      "type": "rprompt"
     }
   ],
   "console_title_template": "{{ .Shell }} in {{ .Folder }}",
