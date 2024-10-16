@@ -47,8 +47,8 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh_my_posh.json)"
 alias cls='clear'
 alias vi='nvim'
 
-alias ll='exa -AlF'
-alias la='exa -A'
+alias ll='exa -laF'
+alias la='exa -a'
 alias l='ls -CF --color'
 alias aptu="sudo apt update && sudo apt install"
 alias bits="cd ~/bits"
