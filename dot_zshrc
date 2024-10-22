@@ -53,6 +53,7 @@ alias l='ls -CF --color'
 alias aptu="sudo apt update && sudo apt install"
 alias bits="cd ~/bits"
 alias cm="chezmoi"
+alias cat="bat"
 
 alias ..='cd ..'
 alias act='. ./.venv/bin/activate'
