@@ -24,9 +24,14 @@
 ################
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
-monitor=,1920x1080@60,auto,1
-
-
+{{ if eq .chezmoi.hostname "failarchbox" }}
+# failarchbox config
+monitor=HDMI-A-1,2560x1440,2560x0,1
+monitor=HDMI-A-2,2560x1600,0x0,1
+{{ else }}
+# default config
+monitor=, preferred, auto, 1
+{{ end }}
 ###################
 ### MY PROGRAMS ###
 ###################
@@ -179,7 +184,7 @@ input {
     kb_layout = us
     kb_variant =
     kb_model =
-    kb_options = caps:swapescape
+   # kb_options = caps:swapescape
     kb_rules =
 
     follow_mouse = 1
@@ -212,8 +217,8 @@ device {
 $mainMod = SUPER # Sets "Windows" key as main modifier
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-bind = $mainMod, Q, exec, $terminal
-bind = $mainMod, C, killactive,
+bind = $mainMod, C, exec, $terminal
+bind = $mainMod, Q, killactive,
 bind = $mainMod, M, exit,
 bind = $mainMod, E, exec, $fileManager
 bind = $mainMod, V, togglefloating,
