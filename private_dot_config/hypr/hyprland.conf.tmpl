@@ -184,7 +184,11 @@ input {
     kb_layout = us
     kb_variant =
     kb_model =
+{{ if eq .chezmoi.hostname "failarchbox" }}
    # kb_options = caps:swapescape
+{{ else }}
+    kb_options = caps:swapescape
+{{ end }}
     kb_rules =
 
     follow_mouse = 1
