@@ -159,19 +159,24 @@ animations {
 
 {{ if eq .chezmoi.hostname "failarchbox" }}
 # failarchbox config
-workspace = 1, monitor:HDMI-A-1
-workspace = 2, monitor:HDMI-A-1
-workspace = 3, monitor:HDMI-A-1
-workspace = 4, monitor:HDMI-A-1
-workspace = 5, monitor:HDMI-A-1
+workspace = 1, monitor:HDMI-A-1, persistent:true
+workspace = 2, monitor:HDMI-A-1, persistent:true
+workspace = 3, monitor:HDMI-A-1, persistent:true
+workspace = 4, monitor:HDMI-A-1, persistent:true
+workspace = 5, monitor:HDMI-A-1, persistent:true
 windowrulev2 = opacity 1.0 override, title:(.*Zoom.*)$
 windowrulev2 = opacity 1.0 override, title:(.*Google Meet.*)$
 
-workspace = 6, monitor:HDMI-A-2
-workspace = 7, monitor:HDMI-A-2
-workspace = 8, monitor:HDMI-A-2
-workspace = 9, monitor:HDMI-A-2
+workspace = 6, monitor:HDMI-A-2, persistent:true
+workspace = 7, monitor:HDMI-A-2, persistent:true
+workspace = 8, monitor:HDMI-A-2, persistent:true
+workspace = 9, monitor:HDMI-A-2, persistent:true
 {{ else }}
+workspace = 1, persistent:true
+workspace = 2, persistent:true
+workspace = 3, persistent:true
+workspace = 4, persistent:true
+
 # default workspace config
 {{ end }}
 
