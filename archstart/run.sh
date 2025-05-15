@@ -118,4 +118,5 @@ else
   . install-flatpaks.sh
 fi
 
+#TODO Switch to zsh as default shell
 echo "Setup complete! You may want to reboot your system."
