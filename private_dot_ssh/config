@@ -1,3 +1,3 @@
 Host swarm1.boom.fail
-  SetEnv TERM=linux
+  SetEnv TERM=xterm
 
