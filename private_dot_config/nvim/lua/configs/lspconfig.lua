@@ -16,6 +16,16 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+lspconfig.lua_ls.setup{
+    settings = {
+    Lua = {
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      }
+    }
+  }
+}
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {
 --   on_attach = nvlsp.on_attach,
