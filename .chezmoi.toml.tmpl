@@ -1,5 +1,7 @@
 {{ $type := promptStringOnce . "type" "System type" -}}
+{{ $hostname := promptStringOnce . "hostname" "System hostname" -}}
 
 [data]
   type = {{ $type | quote }}
+  hostname = {{ $hostname | quote}}
 
