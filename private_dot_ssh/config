@@ -1,3 +1,3 @@
-Host swarm1.boom.fail
+Host *
   SetEnv TERM=xterm
 
