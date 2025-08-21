@@ -18,7 +18,9 @@ sudo pacman -Sy --noconfirm --needed git
 sudo pacman -Sy --noconfirm --needed chezmoi
 
 chezmoi init chris-cushing
-chezmoi cd
+chezmoi apply
+
+cd ~/archstart/
 
 echo -e "\nInstallation starting..."
 source ./install.sh
