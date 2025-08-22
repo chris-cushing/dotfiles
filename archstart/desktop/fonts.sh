@@ -1,7 +1,15 @@
 #!/bin/bash
 
-yay -S --noconfirm --needed ttf-font-awesome ttf-cascadia-mono-nerd ttf-ia-writer noto-fonts noto-fonts-emoji ttf-hack-nerd
+if [[ "$CHEZMOI_TYPE" == "desktop"]]; then
 
-if [ -z "$OMARCHY_BARE" ]; then
-  yay -S --noconfirm --needed ttf-jetbrains-mono noto-fonts-cjk noto-fonts-extra
+  yay -S --noconfirm --needed \
+    ttf-font-awesome \
+    ttf-cascadia-mono-nerd \
+    ttf-ia-writer \
+    noto-fonts \
+    noto-fonts-emoji \
+    ttf-hack-nerd \
+    ttf-jetbrains-mono \
+    noto-fonts-cjk \
+    noto-fonts-extra
 fi
