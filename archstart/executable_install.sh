@@ -24,7 +24,7 @@ catch_errors() {
 trap catch_errors ERR
 
 show_logo() {
-  clear
+  # clear
   tte -i ./logo.txt --frame-rate ${2:-120} ${1:-expand}
   echo
 }
@@ -72,7 +72,7 @@ source ./apps/mimetypes.sh
 show_logo highlight
 show_subtext "Updating system packages [4/4]"
 
-if [[ "$CHEZMOI_TYPE" == "desktop"]]; then
+if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
   yay -Syu --noconfirm --ignore uwsm
 fi
 

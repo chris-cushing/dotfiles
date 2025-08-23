@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$CHEZMOI_TYPE" == "desktop"]]; then
+if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
 
   # Use dark mode for QT apps too (like kdenlive)
   if ! yay -Q kvantum-qt5 &>/dev/null; then

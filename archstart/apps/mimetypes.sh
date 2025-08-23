@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$CHEZMOI_TYPE" == "desktop"]]; then
+if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
 
   # Open all images with imv
   xdg-mime default imv.desktop image/png

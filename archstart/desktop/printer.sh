@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$CHEZMOI_TYPE" == "desktop"]]; then
+if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
 
   sudo pacman -S --noconfirm \
     cups \

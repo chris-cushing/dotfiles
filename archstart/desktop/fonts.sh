@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$CHEZMOI_TYPE" == "desktop"]]; then
+if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
 
   yay -S --noconfirm --needed \
     ttf-font-awesome \

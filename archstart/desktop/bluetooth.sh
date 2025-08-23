@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$CHEZMOI_TYPE" == "desktop"]]; then
+if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
   
   # Install bluetooth controls
   yay -S --noconfirm --needed blueberry
