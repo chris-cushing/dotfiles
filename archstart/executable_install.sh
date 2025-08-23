@@ -26,7 +26,6 @@ trap catch_errors ERR
 show_logo() {
   clear
   tte -i ./logo.txt --frame-rate ${2:-120} ${1:-expand}
-  cat <./logo.txt
   echo
 }
 
