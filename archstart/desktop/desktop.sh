@@ -7,9 +7,6 @@ if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
   pamixer `: # pulse audio cli mixer` \
   wiremix `: # pipewire tui mixer` \
   wireplumber `: # session and policy manager for pipwire` \
-  fcitx5 `: # input method framework #TODO Do I need this?` \
-  fcitx5-gtk `: # input method framework #TODO Do I need this?` \
-  fcitx5-qt `: # input method framework #TODO Do I need this?` \
   wl-clip-persist `: # make the clipboard persist after source app closes` \
   nautilus `: # gui file manager from gnome` \
   sushi `: # file previewers for nautilus` \
