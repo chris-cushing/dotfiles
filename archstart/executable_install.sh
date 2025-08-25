@@ -37,9 +37,13 @@ show_subtext() {
 # Install prerequisites
 sudo pacman -Sy --noconfirm --needed git
 sudo pacman -Sy --noconfirm --needed chezmoi
-sudo pacman -Sy --noconfirm --needed jq
+sudo pacman -Sy --nocomfirm --needed gum
 
-SYSTEM_TYPE=chezmoi data | jq .type
+SYSTEM_TYPE=gum=$(gum choose "server" "desktop")
+# Write these values to ~/.config/chezmoi/chezmoi.toml
+# and pray that they will be recognized by...
+
+chezmoi init chris-cushing
 
 source ./preflight/guard.sh
 source ./preflight/aur.sh
