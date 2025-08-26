@@ -19,4 +19,8 @@ if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
    swayosd `: # on screen display` \
    xdg-desktop-portal-hyprland `: # desktop helpers` \
    xdg-desktop-portal-gtk `: desktop helpers `
+  # install greetd
+  # tuigreet
+  #
+  # configure those
 fi
