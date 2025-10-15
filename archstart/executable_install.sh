@@ -30,7 +30,8 @@ trap catch_errors ERR
 # }
 
 show_subtext() {
-  echo "$1" | tte --frame-rate ${3:-640} ${2:-wipe}
+  # echo "$1" | tte --frame-rate ${3:-640} ${2:-wipe}
+  echo "$1"
   echo
 }
 
