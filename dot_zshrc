@@ -58,6 +58,8 @@ alias cat="bat"
 alias ..='cd ..'
 alias act='. ./.venv/bin/activate'
 
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -68,3 +70,4 @@ export NVM_DIR="$HOME/.nvm"
 
 export EDITOR="nvim"
 
+export PATH="$HOME/zig-x86_64-linux-0.16.0-dev.660+27aba2d77:$PATH"
