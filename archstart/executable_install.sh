@@ -52,14 +52,14 @@ source ./preflight/presentation.sh
 
 # Tooling
 # show_logo decrypt 920
-show_subtext "Installing terminal tools [1/4]"
+show_subtext "Installing terminal tools"
 source ./tooling/terminal.sh
 source ./tooling/development.sh
 source ./tooling/nvim.sh
 
 # Desktop
 # show_logo slice 60
-show_subtext "Installing desktop tools [2/4]"
+show_subtext "Installing desktop tools"
 source ./desktop/desktop.sh
 source ./desktop/hyprlandia.sh
 source ./desktop/theme.sh
@@ -69,13 +69,13 @@ source ./desktop/printer.sh
 
 Apps
 # show_logo expand
-show_subtext "Installing default applications [3/4]"
+show_subtext "Installing default applications"
 source ./apps/xtras.sh
 source ./apps/mimetypes.sh
 
 # Updates
 # show_logo highlight
-show_subtext "Updating system packages [4/4]"
+show_subtext "Updating system packages"
 
 if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
   yay -Syu --noconfirm --ignore uwsm
