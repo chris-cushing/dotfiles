@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-install_packages() {
+load_packages() {
     local CONFIG_FILE=$1
+    pkg_list=()
     mapfile -t packages < <(
         sed -e 's/#.*//' \
           -e 's/^[[:space:]]*//' \
@@ -9,6 +10,6 @@ install_packages() {
             "$CONFIG_FILE" |
         grep -v '^$'              # ← grep with the -v flag removes blank lines
     )
-    yay -S "${packages[@]}"
+    pkg_list="${packages[@]}"
 }
 
