@@ -53,25 +53,17 @@ source ./preflight/presentation.sh
 # Tooling
 # show_logo decrypt 920
 show_subtext "Installing terminal tools"
+
 source ./tooling/terminal.sh
 source ./tooling/development.sh
 source ./tooling/nvim.sh
 
 # Desktop
 # show_logo slice 60
-show_subtext "Installing desktop tools"
-source ./desktop/desktop.sh
-source ./desktop/hyprlandia.sh
-source ./desktop/theme.sh
-source ./desktop/bluetooth.sh
-source ./desktop/fonts.sh
-source ./desktop/printer.sh
-
-Apps
-# show_logo expand
-show_subtext "Installing default applications"
-source ./apps/xtras.sh
-source ./apps/mimetypes.sh
+if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
+  show_subtext "Installing desktop tools"
+  source desktop.sh
+fi
 
 # Updates
 # show_logo highlight
