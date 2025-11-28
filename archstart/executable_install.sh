@@ -44,6 +44,7 @@ SYSTEM_TYPE=gum=$(gum choose "server" "desktop")
 # Write these values to ~/.config/chezmoi/chezmoi.toml
 # and pray that they will be recognized by...
 
+# is this a problem to re-init?
 chezmoi init chris-cushing
 
 source ./preflight/guard.sh
@@ -55,13 +56,11 @@ source ./preflight/presentation.sh
 show_subtext "Installing terminal tools"
 
 source ./tooling/terminal.sh
-source ./tooling/development.sh
 source ./tooling/nvim.sh
 
 # Desktop
 # show_logo slice 60
 if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
-  show_subtext "Installing desktop tools"
   source desktop.sh
 fi
 
