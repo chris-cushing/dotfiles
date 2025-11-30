@@ -35,12 +35,13 @@ show_subtext() {
   echo
 }
 
+source ./load_config.sh
 # Install prerequisites
 sudo pacman -Sy --noconfirm --needed git
 sudo pacman -Sy --noconfirm --needed chezmoi
-sudo pacman -Sy --nocomfirm --needed gum
+sudo pacman -Sy --noconfirm --needed gum
 
-SYSTEM_TYPE=gum=$(gum choose "server" "desktop")
+SYSTEM_TYPE=$(gum choose "server" "desktop")
 # Write these values to ~/.config/chezmoi/chezmoi.toml
 # and pray that they will be recognized by...
 
@@ -54,21 +55,21 @@ source ./preflight/presentation.sh
 # Tooling
 # show_logo decrypt 920
 show_subtext "Installing terminal tools"
-
 source ./tooling/terminal.sh
 source ./tooling/nvim.sh
 
 # Desktop
 # show_logo slice 60
-if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
-  source desktop.sh
+if [[ "$SYSTEM_TYPE" == "desktop" ]]; then
+  show_subtext "Desktop Selected"
+  source ./desktop/desktop.sh
 fi
 
 # Updates
 # show_logo highlight
 show_subtext "Updating system packages"
 
-if [[ "$CHEZMOI_TYPE" == "desktop" ]]; then
+if [[ "$SYSTEM_TYPE" == "desktop" ]]; then
   yay -Syu --noconfirm --ignore uwsm
 fi
 
