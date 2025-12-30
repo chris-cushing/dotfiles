@@ -119,10 +119,10 @@ workspace = 5, persistent:true
 
 # default workspace config
 {{ end }}
-windowrulev2 = opacity 1.0 override, title:(.*Zoom.*)$
-windowrulev2 = opacity 1.0 override, title:(.*Meet -.*)$
-windowrulev2 = opacity 1.0 override, title:(.*Doxy.me.*)$
-windowrulev2 = opacity 1.0 override, title:(.*YouTube.*)$
+windowrule = opacity 1.0 override, match:title .*Zoom.*
+windowrule = opacity 1.0 override, match:title .*Meet -.*
+windowrule = opacity 1.0 override, match:title .*Doxy.me.*
+windowrule = opacity 1.0 override, match:title .*YouTube.*
 
 # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
 dwindle {
