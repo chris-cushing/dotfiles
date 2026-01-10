@@ -1,0 +1,16 @@
+wallpaper {
+{{ if eq .chezmoi.hostname "failarchbox" }}
+  monitor = HDMI-A-1
+{{else}}
+  monitor = deDP-1
+{{ end }}
+  path = /home/ccushing/.config/wallpaper1.png
+}
+
+{{ if eq .chezmoi.hostname "failarchbox" }}
+wallpaper {
+  monitor = HDMI-A-2
+  path = /home/ccushing/.config/wallpaper1.png
+}
+{{ end }}
+splash = false
