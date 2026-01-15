@@ -46,7 +46,7 @@ SYSTEM_TYPE=$(gum choose "server" "desktop")
 # and pray that they will be recognized by...
 
 # is this a problem to re-init?
-chezmoi init chris-cushing
+chezmoi init git.boom.fail/ccushing
 
 source ./preflight/guard.sh
 source ./preflight/aur.sh
