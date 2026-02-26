@@ -19,7 +19,9 @@ return {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       -- Mason must be loaded before its dependents so we need to set it up here.
       -- NOTE: `opts = {}` is the same as calling `require('mason').setup({})`
-      { 'mason-org/mason.nvim', opts = {} },
+      { 'mason-org/mason.nvim', opts = {
+        automatic_installation = false,
+      } },
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
@@ -208,12 +210,6 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        zls = {
-          cmd = { 'zls' },
-          filetypes = { 'zig', 'zir' },
-          root_dir = require('lspconfig').util.root_pattern('build.zig', '.git') or vim.loop.cwd,
-          single_file_support = true,
-        },
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
@@ -225,7 +221,6 @@ return {
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
-        --
 
         lua_ls = {
           -- cmd = { ... },
@@ -233,6 +228,9 @@ return {
           -- capabilities = {},
           settings = {
             Lua = {
+              diagnostics = {
+                globals = { 'vim' },
+              },
               completion = {
                 callSnippet = 'Replace',
               },
@@ -276,7 +274,15 @@ return {
           end,
         },
       }
+
+      vim.lsp.config('zls', {
+        cmd = { '/usr/bin/zls' },
+        capabilities = capabilities,
+      })
+
+      vim.lsp.enable('zls', true)
     end,
   },
 }
+
 -- vim: ts=2 sts=2 sw=2 et
